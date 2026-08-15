@@ -175,7 +175,8 @@ async def create_order(order: OrderIn, request: Request):
         task = asyncio.create_task(_notify(
             request.app,
             {"number": number, "delivery": order.delivery, "address": address,
-             "total": total, "customer_name": order.customer_name.strip()},
+             "total": total, "customer_name": order.customer_name.strip(),
+             "phone": order.phone.strip()},
             lines, user))
         # без живой ссылки task может собрать GC до отправки
         _notify_tasks.add(task)
