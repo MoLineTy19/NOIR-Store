@@ -1,0 +1,1 @@
+"""NOIR Store - бекенд Mini App (FastAPI + aiogram 3 + SQLite)."""
